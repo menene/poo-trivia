@@ -1,58 +1,59 @@
 # Trivia POO
 
-An interactive game-show-style study guide for CC2008 — Object-Oriented Programming. The interface is in Spanish because it is designed for the class, and the question content comes from the original `repaso.md` review guide.
+Aplicación interactiva con experiencia de game show para repasar el curso CC2008 — Programación Orientada a Objetos. La interfaz está en español y el contenido proviene de la guía original `repaso.md`.
 
-## What is included
+## ¿Qué incluye?
 
-- All 235 questions from `repaso.md`.
-- Three progressive study levels:
-  - **Level 1 — Fundamentos:** sections 1–4, 98 questions.
-  - **Level 2 — Relaciones y arreglos:** sections 5–7, 84 questions.
-  - **Level 3 — Modo experto:** sections 8–10, 53 questions.
-- Self-assessment gameplay: reveal the original answer, then choose `Lo sabía` or `Necesito repasar` to continue immediately.
-- **God Mode:** 20 expert questions converted to multiple choice, with 10 seconds per question.
-- Automatic timeout behavior in God Mode: the question is marked incorrect, the correct answer is highlighted, and the student can continue from the same screen.
-- Session-based score tracking with final results screens.
-- Responsive HTML/CSS styling with Thymeleaf templates.
+- Las 235 preguntas de `repaso.md`.
+- Tres niveles progresivos:
+  - **Nivel 1 — Fundamentos:** secciones 1–4, 98 preguntas.
+  - **Nivel 2 — Relaciones y arreglos:** secciones 5–7, 84 preguntas.
+  - **Nivel 3 — Modo experto:** secciones 8–10, 53 preguntas.
+- Modo de autoevaluación: el estudiante revela la respuesta original y elige `Lo sabía` o `Necesito repasar` para continuar inmediatamente.
+- **God Mode:** 20 preguntas expertas convertidas en opción múltiple, con 10 segundos por pregunta.
+- Si el tiempo se agota en God Mode, la pregunta se marca como incorrecta, se resalta la respuesta correcta y aparece el botón para continuar.
+- Puntaje y progreso guardados en la sesión del navegador.
+- Pantallas finales de resultados.
+- Interfaz responsiva con HTML, CSS y plantillas Thymeleaf.
 
-## Requirements
+## Requisitos
 
-Install these before running the project:
+Instala lo siguiente antes de ejecutar el proyecto:
 
-- Java Development Kit (JDK) 17 or newer.
-- Apache Maven 3.9 or newer.
-- A modern web browser.
+- Java Development Kit (JDK) 17 o superior.
+- Apache Maven 3.9 o superior.
+- Un navegador web moderno.
 
-Node.js, npm, a database, and a separate web server are not required. Maven downloads the Spring Boot dependencies automatically on the first build.
+No se necesita Node.js, npm, una base de datos ni un servidor web separado. Maven descargará automáticamente las dependencias de Spring Boot durante la primera compilación.
 
-Check whether Java and Maven are already installed:
+Verifica si Java y Maven ya están instalados:
 
 ```bash
 java -version
 mvn -version
 ```
 
-## Installing Java and Maven
+## Instalación de Java y Maven
 
-### macOS with Homebrew
+### macOS con Homebrew
 
-Install Homebrew first if it is not already installed: <https://brew.sh>
+Instala Homebrew si todavía no lo tienes: <https://brew.sh>
 
 ```bash
 brew update
 brew install openjdk maven
 ```
 
-If macOS cannot find Java after installing it, add Homebrew Java to the shell path:
+Si macOS no encuentra Java después de la instalación, agrega Java al `PATH`:
 
 ```bash
 echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-For Intel Macs, use `/usr/local/opt/openjdk/bin` instead of `/opt/homebrew/opt/openjdk/bin`.
+En Macs con procesador Intel, usa `/usr/local/opt/openjdk/bin` en lugar de `/opt/homebrew/opt/openjdk/bin`.
 
-### Ubuntu or Debian Linux
+### Ubuntu o Debian Linux
 
 ```bash
 sudo apt update
@@ -61,62 +62,62 @@ sudo apt install openjdk-17-jdk maven
 
 ### Windows
 
-With [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/):
+Usando [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/):
 
 ```powershell
 winget install EclipseAdoptium.Temurin.17.JDK
 winget install Apache.Maven
 ```
 
-Or with Chocolatey:
+O usando Chocolatey:
 
 ```powershell
 choco install temurin17 maven
 ```
 
-Close and reopen the terminal after installation, then verify:
+Cierra y vuelve a abrir la terminal después de la instalación. Luego verifica:
 
 ```powershell
 java -version
 mvn -version
 ```
 
-## Run the application
+## Ejecutar la aplicación
 
-From the project directory:
+Desde la carpeta del proyecto:
 
 ```bash
-cd /path/to/trivia
+cd /ruta/al/proyecto/trivia
 mvn spring-boot:run
 ```
 
-Open <http://localhost:8080> in a browser.
+Abre <http://localhost:8080> en el navegador.
 
-Stop the server with `Ctrl+C`.
+Para detener el servidor, presiona `Ctrl+C`.
 
-## Build and test
+## Compilar y probar
 
-Run the automated tests:
+Ejecuta las pruebas automatizadas:
 
 ```bash
 mvn test
 ```
 
-Create the executable Spring Boot jar:
+Crea el archivo `.jar` ejecutable de Spring Boot:
 
 ```bash
 mvn package
 ```
 
-Run the packaged application:
+Ejecuta la aplicación empaquetada:
 
 ```bash
 java -jar target/trivia-poo-0.0.1-SNAPSHOT.jar
 ```
 
-The build copies `repaso.md` into the application resources, so the question bank is available both during development and when running the packaged jar.
+Durante la compilación, Maven copia `repaso.md` dentro de los recursos de la aplicación. Por eso el banco de preguntas funciona tanto durante el desarrollo como al ejecutar el `.jar` empaquetado.
 
-## Project structure
+## Estructura del proyecto
 
 ```text
 trivia/
@@ -142,55 +143,81 @@ trivia/
 │       └── .../QuestionBankTest.java
 ```
 
-## OOP and Spring concepts demonstrated
+## Conceptos de POO y Spring demostrados
 
-- **Encapsulation:** `Game` and `GodGame` own and update score/progress instead of exposing mutable state directly.
-- **Immutable domain objects:** `Question` and `GodQuestion` are Java records.
-- **Composition:** the controllers use question-bank and game objects to coordinate the application.
-- **Separation of responsibility:** models represent data and behavior, services manage question data, controllers handle HTTP flow, and Thymeleaf templates render the UI.
-- **Dependency injection:** Spring provides `QuestionBank` and `GodQuestionBank` to `TriviaController`.
-- **Collections and streams:** questions are grouped and filtered by level using Java collections and streams.
-- **HTTP sessions:** each student’s current game and score are kept in the browser session.
-- **Client/server collaboration:** JavaScript manages the 10-second God Mode countdown, while Spring validates the submitted answer and updates the score.
+- **Encapsulamiento:** `Game` y `GodGame` administran su propio puntaje y progreso.
+- **Objetos inmutables:** `Question` y `GodQuestion` son records de Java.
+- **Composición:** el controlador utiliza objetos de juegos y bancos de preguntas para coordinar la aplicación.
+- **Separación de responsabilidades:** los modelos representan datos y comportamiento, los servicios administran las preguntas, los controladores manejan HTTP y Thymeleaf renderiza la interfaz.
+- **Inyección de dependencias:** Spring proporciona `QuestionBank` y `GodQuestionBank` a `TriviaController`.
+- **Colecciones y streams:** las preguntas se filtran y agrupan por nivel usando colecciones y streams de Java.
+- **Sesiones HTTP:** cada estudiante conserva su partida y puntaje en la sesión del navegador.
+- **Colaboración cliente-servidor:** JavaScript administra el contador de 10 segundos y Spring valida la respuesta y actualiza el puntaje.
 
-## Adding or changing questions
+## Agregar o modificar preguntas
 
-For the regular study modes, edit `repaso.md`. Questions must keep the existing format:
+Para los modos normales, edita `repaso.md`. Las preguntas deben conservar este formato:
 
 ```markdown
 **236. ¿Qué es un ejemplo?**
 La respuesta y explicación van aquí.
 ```
 
-The question parser uses the numbered bold heading and the following text as the answer. Keep question numbers unique and preserve the section headings so the level grouping remains correct.
+El parser usa el encabezado numerado en negrita y toma el texto siguiente como respuesta. Mantén los números únicos y conserva los encabezados de sección para que la agrupación por niveles siga funcionando.
 
-God Mode currently converts questions 183–202 into multiple choice. If those questions change substantially, update the corresponding choices in `GodQuestionBank.java`.
+God Mode convierte actualmente las preguntas 183–202 en opción múltiple. Si modificas mucho esas preguntas, actualiza las opciones correspondientes en `GodQuestionBank.java`.
 
-## Troubleshooting
+## Despliegue
+
+GitHub Pages solamente puede servir archivos estáticos HTML, CSS y JavaScript; no puede ejecutar Spring Boot. Para publicar esta versión de Spring Boot, utiliza un servicio que ejecute aplicaciones Java, como Railway o Render.
+
+En Railway puedes conectar el repositorio de GitHub y desplegar el proyecto como una aplicación Spring Boot. Railway detecta aplicaciones Java automáticamente. También debes agregar:
+
+```properties
+server.port=${PORT:8080}
+```
+
+en `src/main/resources/application.properties` para que la aplicación use el puerto proporcionado por la plataforma.
+
+Si la plataforma solicita comandos manuales, usa:
+
+```text
+Build command:
+mvn clean package -DskipTests
+
+Start command:
+java -jar target/trivia-poo-0.0.1-SNAPSHOT.jar
+```
+
+## Solución de problemas
 
 ### `zsh: command not found: mvn`
 
-Maven is not installed or is not on your `PATH`. On macOS with Homebrew:
+Maven no está instalado o no está incluido en el `PATH`. En macOS con Homebrew:
 
 ```bash
 brew install maven
 ```
 
-Then open a new terminal and verify with `mvn -version`.
+Después abre una terminal nueva y verifica con:
 
-### Port 8080 is already in use
+```bash
+mvn -version
+```
 
-Run the application on another port:
+### El puerto 8080 ya está ocupado
+
+Ejecuta la aplicación en otro puerto:
 
 ```bash
 mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 ```
 
-Then open <http://localhost:8081>.
+Luego abre <http://localhost:8081>.
 
-### Dependencies fail during the first build
+### Fallan las dependencias durante la primera compilación
 
-Make sure the computer has internet access. Maven needs to download Spring Boot dependencies the first time. Then retry:
+Verifica que la computadora tenga conexión a internet. Maven necesita descargar las dependencias de Spring Boot la primera vez. Luego intenta:
 
 ```bash
 mvn clean test
