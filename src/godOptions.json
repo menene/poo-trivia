@@ -1,0 +1,182 @@
+{
+  "183": {
+    "correctOption": 0,
+    "options": [
+      "Tipo y tamaño fijos",
+      "Solo puede guardar Strings",
+      "No permite índices",
+      "Siempre usa memoria infinita"
+    ]
+  },
+  "184": {
+    "correctOption": 1,
+    "options": [
+      "Cuando el tamaño nunca cambia",
+      "Cuando la cantidad de elementos es variable",
+      "Solo para matrices",
+      "Cuando no existen objetos"
+    ]
+  },
+  "185": {
+    "correctOption": 2,
+    "options": [
+      "HashMap<E> en java.lang",
+      "Vector<E> en java.io",
+      "ArrayList<E> en java.util",
+      "DynamicArray<E> en java.array"
+    ]
+  },
+  "186": {
+    "correctOption": 0,
+    "options": [
+      "Implementa List<E> y crece como un arreglo dinámico",
+      "Implementa Set<E> y no permite repetidos",
+      "Implementa Map<E> y usa claves",
+      "Implementa Queue<E> y ordena siempre"
+    ]
+  },
+  "187": {
+    "correctOption": 1,
+    "options": [
+      "ArrayList<String> frutas = new ArrayList<>(0);",
+      "ArrayList<String> frutas = new ArrayList<>();",
+      "ArrayList<int> frutas = new ArrayList<>();",
+      "List<String> frutas = new Scanner();"
+    ]
+  },
+  "188": {
+    "correctOption": 2,
+    "options": [
+      "items.insert(0, \"A\")",
+      "items.addAt(\"A\")",
+      "items.add(\"A\") y items.add(0, \"Inicio\")",
+      "items.push(\"A\")"
+    ]
+  },
+  "189": {
+    "correctOption": 0,
+    "options": [
+      "get() lee y set() reemplaza",
+      "read() lee y put() reemplaza",
+      "at() lee y replace() reemplaza",
+      "index() lee y update() reemplaza"
+    ]
+  },
+  "190": {
+    "correctOption": 3,
+    "options": [
+      "Siempre por objeto",
+      "Siempre por índice",
+      "Con clear() y reset()",
+      "remove(int) por índice y remove(Object) por objeto"
+    ]
+  },
+  "191": {
+    "correctOption": 1,
+    "options": [
+      "push(), pop() y peek()",
+      "size(), contains() y clear()",
+      "length(), find() y empty()",
+      "count(), search() y wipe()"
+    ]
+  },
+  "192": {
+    "correctOption": 2,
+    "options": [
+      "Solo con for tradicional",
+      "Solo con Stream",
+      "for tradicional, for-each y forEach()",
+      "while, do-while y switch"
+    ]
+  },
+  "193": {
+    "correctOption": 0,
+    "options": [
+      "Puede lanzar ConcurrentModificationException",
+      "La lista se ordena automáticamente",
+      "Se duplica la lista",
+      "No ocurre nada nunca"
+    ]
+  },
+  "194": {
+    "correctOption": 1,
+    "options": [
+      "Arrays.toList() siempre copia",
+      "Arrays.asList() crea una vista; toArray() vuelve a un array",
+      "ArrayList.toArray() solo sirve para primitivos",
+      "No se pueden convertir"
+    ]
+  },
+  "195": {
+    "correctOption": 3,
+    "options": [
+      "Devuelve una lista siempre mutable",
+      "Copia profundamente todos los objetos",
+      "Convierte todo a String",
+      "Devuelve una vista de tamaño fijo respaldada por el array"
+    ]
+  },
+  "196": {
+    "correctOption": 0,
+    "options": [
+      "ArrayList<Persona> personas = new ArrayList<>()",
+      "ArrayList<Persona> personas = new Persona()",
+      "ArrayList<int> personas = new ArrayList<>()",
+      "Persona[] personas = new ArrayList<>()"
+    ]
+  },
+  "197": {
+    "correctOption": 2,
+    "options": [
+      "Guarda solo un elemento",
+      "Usa una lista enlazada",
+      "Duplica su arreglo interno cuando se llena",
+      "Reduce su tamaño en cada add"
+    ]
+  },
+  "198": {
+    "correctOption": 1,
+    "options": [
+      "Una clase abstracta",
+      "Un evento anómalo que interrumpe el flujo normal",
+      "Un tipo de colección",
+      "Un comentario del compilador"
+    ]
+  },
+  "199": {
+    "correctOption": 3,
+    "options": [
+      "El programa siempre se detiene primero",
+      "Java ignora la excepción",
+      "Se ejecuta finally antes de crearla",
+      "Se crea, se lanza y se busca un catch; si no, se propaga"
+    ]
+  },
+  "200": {
+    "correctOption": 0,
+    "options": [
+      "Throwable contiene Error y Exception",
+      "Exception contiene Throwable y Error",
+      "Object contiene solo RuntimeException",
+      "Error hereda de IOException"
+    ]
+  },
+  "201": {
+    "correctOption": 2,
+    "options": [
+      "Una interfaz para listas",
+      "Una excepción chequeada",
+      "La superclase base de errores y excepciones",
+      "El compilador de Java"
+    ]
+  },
+  "202": {
+    "correctOption": 1,
+    "options": [
+      "Error siempre es una excepción chequeada",
+      "Error suele representar problemas graves; Exception representa situaciones que una aplicación puede manejar",
+      "Exception no puede tener subclases",
+      "Error solo ocurre al compilar"
+    ]
+  }
+}

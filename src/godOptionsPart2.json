@@ -1,0 +1,182 @@
+{
+  "1": {
+    "correctOption": 1,
+    "options": [
+      "Una lista que siempre crece",
+      "Una secuencia de tipo común y longitud fija",
+      "Un objeto sin índices",
+      "Una interfaz para colecciones"
+    ]
+  },
+  "3": {
+    "correctOption": 2,
+    "options": [
+      "n",
+      "1",
+      "n - 1",
+      "n + 1"
+    ]
+  },
+  "6": {
+    "correctOption": 0,
+    "options": [
+      "i < datos.length",
+      "i <= datos.length",
+      "i < datos.length + 1",
+      "i == datos.length"
+    ]
+  },
+  "9": {
+    "correctOption": 3,
+    "options": [
+      "original = copia",
+      "original.cloneDeep()",
+      "new ArrayList<>(original)",
+      "Arrays.copyOf(original, original.length)"
+    ]
+  },
+  "51": {
+    "correctOption": 2,
+    "options": [
+      "Un array de tamaño fijo",
+      "Una clase que solo guarda primitivos",
+      "Una lista cuyo número de elementos puede variar",
+      "Una matriz bidimensional"
+    ]
+  },
+  "53": {
+    "correctOption": 1,
+    "options": [
+      "Porque int ocupa demasiado espacio",
+      "Porque los genéricos requieren tipos de referencia",
+      "Porque Integer no puede guardar números",
+      "Porque ArrayList solo permite String"
+    ]
+  },
+  "56": {
+    "correctOption": 0,
+    "options": [
+      "El primero elimina por índice; el segundo, por valor",
+      "Ambos eliminan el valor cero",
+      "Ambos eliminan el índice cero",
+      "El primero limpia toda la lista"
+    ]
+  },
+  "59": {
+    "correctOption": 3,
+    "options": [
+      "Una copia independiente y redimensionable",
+      "Un Set sin duplicados",
+      "Un array de arrays",
+      "Una lista de tamaño fijo respaldada por el array"
+    ]
+  },
+  "101": {
+    "correctOption": 1,
+    "options": [
+      "Hacer públicos todos los campos",
+      "Controlar el estado mediante operaciones que preservan reglas",
+      "Crear una subclase por cada campo",
+      "Guardar todo en variables static"
+    ]
+  },
+  "104": {
+    "correctOption": 2,
+    "options": [
+      "Conocer todos los campos privados de otra clase",
+      "Usar siempre herencia",
+      "Depender poco de detalles internos de otras clases",
+      "Prohibir que las clases colaboren"
+    ]
+  },
+  "108": {
+    "correctOption": 0,
+    "options": [
+      "Es-un sugiere subtipos; tiene-un sugiere composición",
+      "Ambas relaciones exigen extends",
+      "Tiene-un significa implements",
+      "Es-un significa guardar un campo"
+    ]
+  },
+  "151": {
+    "correctOption": 3,
+    "options": [
+      "Perro contiene un Animal como campo",
+      "Animal hereda de Perro",
+      "Perro implementa dos clases",
+      "Perro es una subclase de Animal"
+    ]
+  },
+  "154": {
+    "correctOption": 1,
+    "options": [
+      "Crear otra versión con diferente nombre",
+      "Redefinir un método heredado con firma compatible",
+      "Cambiar un campo privado directamente",
+      "Llamar siempre al constructor padre"
+    ]
+  },
+  "158": {
+    "correctOption": 2,
+    "options": [
+      "Una clase sin métodos",
+      "Una interfaz con constructor",
+      "Una clase que no se instancia directamente",
+      "Una clase que siempre es final"
+    ]
+  },
+  "201": {
+    "correctOption": 0,
+    "options": [
+      "Tratar distintos subtipos a través de un tipo común",
+      "Crear varios objetos del mismo tipo",
+      "Duplicar un método con otro nombre",
+      "Convertir todos los campos en públicos"
+    ]
+  },
+  "204": {
+    "correctOption": 3,
+    "options": [
+      "Crea un objeto Animal nuevo",
+      "Elimina los métodos de Perro",
+      "Lanza siempre ClassCastException",
+      "Trata al mismo Perro como Animal"
+    ]
+  },
+  "208": {
+    "correctOption": 1,
+    "options": [
+      "Obliga a usar un if para cada clase",
+      "Cada subtipo implementa la operación común",
+      "Impide agregar subtipos",
+      "Solo funciona con campos static"
+    ]
+  },
+  "251": {
+    "correctOption": 2,
+    "options": [
+      "Una clase que siempre tiene estado",
+      "Un array de métodos",
+      "Un contrato que las clases pueden implementar",
+      "Una excepción del compilador"
+    ]
+  },
+  "254": {
+    "correctOption": 0,
+    "options": [
+      "Un método de interfaz con implementación",
+      "Un método abstracto sin cuerpo",
+      "Un constructor de interfaz",
+      "Un campo que cambia por objeto"
+    ]
+  },
+  "258": {
+    "correctOption": 3,
+    "options": [
+      "Porque List es una subclase de ArrayList",
+      "Porque ArrayList no implementa List",
+      "Porque crea dos listas",
+      "Porque el cliente usa el contrato List y puede cambiar la implementación"
+    ]
+  }
+}
